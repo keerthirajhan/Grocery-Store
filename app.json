@@ -1,17 +1,19 @@
 {
   "expo": {
-    "name": "grocery-shop",
+    "name": "Grocery Shop",
     "slug": "grocery-shop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rvs.groceryshop"
     },
     "android": {
+      "package": "com.rvs.groceryshop",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#E8F0D5",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -19,6 +21,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c4ba8d50-e382-421b-9f75-4cad5ad7fb46"
+      }
+    },
+    "owner": "keerthirajhan"
   }
 }
