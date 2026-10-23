@@ -17,7 +17,10 @@ export default function AuthScreen({ navigation, route }) {
   const [errors, setErrors] = useState({});
   const [formError, setFormError] = useState('');
   const [showPw, setShowPw] = useState(false);
-  const set = (k) => (v) => setForm({ ...form, [k]: v });
+  const set = (k) => (v) => {
+    setForm({ ...form, [k]: v });
+    setErrors((e) => ({ ...e, [k]: undefined }));
+  };
   const isUp = mode === 'signup';
 
   const validate = () => {

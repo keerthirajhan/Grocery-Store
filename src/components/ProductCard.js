@@ -61,7 +61,7 @@ export default function ProductCard({ item, index = 0, onPress }) {
 }
 
 const styles = StyleSheet.create({
-  wrap: { flex: 1, margin: 7 },
+  wrap: { flex: 1, margin: 7, maxWidth: '50%' },
   card: { backgroundColor: colors.card, borderRadius: 22, padding: 10, ...shadow },
   photo: { borderRadius: 18, overflow: 'hidden', marginBottom: 10, backgroundColor: '#fff', aspectRatio: 1.1 },
   photoImg: { height: '100%' },

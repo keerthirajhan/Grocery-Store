@@ -16,7 +16,10 @@ export default function AddProductScreen({ navigation }) {
   const [form, setForm] = useState(empty);
   const [category, setCategory] = useState('Fruits');
   const [errors, setErrors] = useState({});
-  const set = (k) => (v) => setForm({ ...form, [k]: v });
+  const set = (k) => (v) => {
+    setForm({ ...form, [k]: v });
+    setErrors((e) => ({ ...e, [k]: undefined }));
+  };
 
   const save = () => {
     const e = {};

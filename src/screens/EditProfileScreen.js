@@ -12,7 +12,10 @@ export default function EditProfileScreen({ navigation }) {
   const toast = useToast();
   const [form, setForm] = useState({ name: user.name, phone: user.phone, address: user.address });
   const [errors, setErrors] = useState({});
-  const set = (k) => (v) => setForm({ ...form, [k]: v });
+  const set = (k) => (v) => {
+    setForm({ ...form, [k]: v });
+    setErrors((e) => ({ ...e, [k]: undefined }));
+  };
 
   const save = () => {
     const e = {};
